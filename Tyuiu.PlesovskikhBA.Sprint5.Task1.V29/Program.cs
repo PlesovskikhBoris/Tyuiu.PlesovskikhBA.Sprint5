@@ -1,10 +1,12 @@
-﻿using Tyuiu.PlesovskikhBA.Sprint5.Task1.V29.Lib;
+﻿using System.Text;
+using Tyuiu.PlesovskikhBA.Sprint5.Task1.V29.Lib;
 namespace Tyuiu.PlesovskikhBA.Sprint5.Task1.V29
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             DataService ds = new DataService();
             Console.Title = "Спринт #5 | Выполнил: Плесовских Б. А. | СМАРТб-24-1";
             Console.WriteLine("***************************************************************************");
