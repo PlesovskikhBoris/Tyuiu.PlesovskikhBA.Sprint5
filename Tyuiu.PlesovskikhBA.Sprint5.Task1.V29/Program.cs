@@ -2,7 +2,7 @@
 using Tyuiu.PlesovskikhBA.Sprint5.Task1.V29.Lib;
 namespace Tyuiu.PlesovskikhBA.Sprint5.Task1.V29
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
@@ -11,23 +11,17 @@ namespace Tyuiu.PlesovskikhBA.Sprint5.Task1.V29
             Console.Title = "Спринт #5 | Выполнил: Плесовских Б. А. | СМАРТб-24-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #5                                                               *");
+            Console.WriteLine("* Тема:                                                                   *");
             Console.WriteLine("* Задание #1                                                              *");
             Console.WriteLine("* Вариант #29                                                             *");
             Console.WriteLine("* Выполнил: Плесовских Борис Александрович | СМАРТб-24-1                  *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу, которая производит табулирование функции:           *");
-            Console.WriteLine("* F(x) = (sin(x) / (x + 1,2)) + cos(x) * 7 * x - 2 на заданном диапазоне  *");
-            Console.WriteLine("* [-5; 5] с шагом 1. Произвести проверку деления на на ноль. При делении  *");
-            Console.WriteLine("* на ноль вернуть значение 0. Результат сохранить в текстовый файл        *");
-            Console.WriteLine("* OutPutFileTask1.txt и вывести на консоль в таблицу.                     *");
-            Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            double y;
             int startValue = -5;
             int stopValue = 5;
+
             Console.WriteLine("startValue = " + startValue);
             Console.WriteLine("stopValue = " + stopValue);
 
@@ -35,30 +29,10 @@ namespace Tyuiu.PlesovskikhBA.Sprint5.Task1.V29
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("+-----------+-----------+");
-            Console.WriteLine("|     x     |    f(x)   |");
-            Console.WriteLine("+-----------+-----------+");
-
-            for (int x = startValue; x <= stopValue; x++)
-            {
-                y = Math.Round(((Math.Sin(x) / (x + 1.2)) + Math.Cos(x) * 7 * x - 2), 2);
-                if ((x + 1.2) == 0)
-                {
-                    y = 0;
-                    Console.WriteLine("| {0,5:d}     |  {1, 6:f2}   |", x, y);
-                }
-                else
-                {
-                    Console.WriteLine("| {0,5:d}     |  {1, 6:f2}   |", x, y);
-                }
-            }
-
-            Console.WriteLine("+-----------+-----------+");
-            Console.WriteLine("***************************************************************************");
-
             string res = ds.SaveToFileTextData(startValue, stopValue);
-            Console.WriteLine("Фaйл: " + res);
-            Console.WriteLine("Coздан!");
+
+            Console.WriteLine("Файл: " + res);
+            Console.WriteLine("Создан!");
             Console.ReadKey();
         }
     }

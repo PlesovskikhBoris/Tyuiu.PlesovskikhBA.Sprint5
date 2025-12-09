@@ -8,13 +8,15 @@ namespace Tyuiu.PlesovskikhBA.Sprint5.Task1.V29.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void ValidSaveToFileTextData()
+        public void CheckExistsFile()
         {
-            string path = @"C:\Users\Administrator\source\repos\Tyuiu.PlesovskikhBA.Sprint5\Tyuiu.PlesovskikhBA.Sprint5.Task1.V29\bin\Debug\OutPutFileTask1.txt";
+            DataService ds = new DataService();
+
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask1.txt");
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;
-            Assert.AreEqual(wait, fileExists);
+            Assert.AreEqual(fileExists, wait);
         }
     }
 }
