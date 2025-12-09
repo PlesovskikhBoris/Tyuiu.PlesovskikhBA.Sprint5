@@ -27,7 +27,7 @@ namespace Tyuiu.PlesovskikhBA.Sprint5.Task0.V25
             int x = 3;
             string path = ds.SaveToFileTextData(x);
 
-            Console.WriteLine($"* При x = {x}                                                              *");
+            Console.WriteLine($"* При x = {x}                                                            *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
